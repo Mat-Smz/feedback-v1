@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+/* var */
+:root {
+  --text: black;
+  --secondary: grey;
+  --object: white;
+  --font: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* main */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  background: var(--object);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+small {
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.main {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: var(--font);
 }
 
-.App-link {
-  color: #61dafb;
+/* feedback card style */
+
+.feed-card {
+  display: flex;
+  flex-direction: row;
+  width: 600px; /* maquette : width 600px */
+  height: 100%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  font-family: var(--font);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.feed-img {
+  min-width: 50px;
+  max-width: 50px;
+  min-height: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  object-position: 50% 50%;
+}
+
+.feed-profil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+  margin-top: 10px;
+  padding-top: 8px;
+}
+
+.feed-content {
+  font-style: italic;
+  text-align: justify;
+  margin-top: 25px; /* Maquette : 25px */
+  color: var(--secondary);
+  font-family: var(--font);
+}
+
+/*media queries */
+@media only screen and (max-width: 768px) {
+  .feed-card {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    margin: auto;
   }
 }
